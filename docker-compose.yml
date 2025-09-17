@@ -1,0 +1,15 @@
+services:
+  stsjobs-api:
+    build: .
+    container_name: stsjobs-api
+    ports:
+      - "8000:8000"
+    environment:
+      ADMIN_USERNAME: ${ADMIN_USERNAME}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+
+    volumes:
+      - django_db:/app/db # Mount volume to /app/data or wherever your data lives
+
+volumes:
+  django_db:
