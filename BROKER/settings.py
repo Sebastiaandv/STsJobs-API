@@ -46,6 +46,11 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://steyn-api.huizedevries.nl',
+    # Add any other domains you use
+]
+
 # Application definition
 
 INSTALLED_APPS = [
